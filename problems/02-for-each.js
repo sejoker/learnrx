@@ -1,34 +1,23 @@
 exports.problem = function () { /*
-Working with Arrays
+Exercise 2: Use forEach to print all the names in an array
 
-The Array is Javascript's only collection type. Arrays are everywhere. We're going to add the five functions to the Array type, and in the 
-process make it much more powerful and useful. As a matter of fact, Array already has the map, filter, and reduce functions! However
-we're going to reimplement these functions as a learning exercise.
-
-This section will follow a pattern. First we'll solve problems the way you probably learned in school, or on your own by reading other 
-people's code. In other words, we'll transform collections into new collections using loops and statements. Then we'll implement one of 
-the five functions, and then use it to solve the same problem again without the loop. Once we've learned the five functions, you'll learn 
-how to combine them to solve complex problems with very little code.
-
-Traversing an Array
-
-Exercise 1: Print all the names in an array
+Let's repeat the previous exercise using the forEach function.
 
 module.exports = function (names) {
-  // print all the names into console using for loop
+  // print all the names into console using forEach
+  // Syntax: arr.forEach(callback[, thisArg])
 }
-
-Ask yourself this question: did we need to specify the order in which the names were printed? If not, why do it?
 */}.toString().split('\n').slice(1,-1).join('\n')
 
 exports.solution = function () { /*
 module.exports = function (names) {
-  var counter;
-
-  for(counter = 0; counter < names.length; counter++) {
-    console.log(names[counter]);
-  }
+  names.forEach(function (name) {
+    console.log(name);
+  });
 }
+
+Notice that forEach lets us specify what we want to happen to each item in the array, 
+but hides how the array is traversed.
 */}.toString().split('\n').slice(1,-1).join('\n')
 
 var verify = require('adventure-verify')
