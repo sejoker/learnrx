@@ -1,0 +1,22 @@
+{
+  "name": "learnrx",
+  "version": "1.0.0",
+  "description": "A module to teach you how to do functional programming with plain JavaScript and RxJS library.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sejoker/learnrx"
+  },
+  "bugs": {
+    "url": "https://github.com/sejoker/learnrx/issues"
+  },
+  "keywords": [
+    "rxjs",
+    "workshop",
+    "adventure",
+    "tutorial"
+  ],
+  "author": "Yevgen Safronov <sejoker@gmail.com>",
+  "license": "ISC",
+  "preferGlobal": true
+}
