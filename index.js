@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var adventure = require('adventure')
 var shop = adventure({
   name: 'learnrx',
@@ -8,6 +7,8 @@ var shop = adventure({
   title: 'Functional Programming in JavaScript'
 })
 
+var fs = require('fs')
+var path = require('path')
 var problems = fs.readdirSync(path.resolve(__dirname, 'problems'))
 problems.filter(function (problem) {
   return problem.match(/^[^.].*\.js$/)
