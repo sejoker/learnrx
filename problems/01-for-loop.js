@@ -1,4 +1,4 @@
-module.exports = function () { /*
+exports.problem = function () { /*
 Working with Arrays
 
 The Array is Javascript's only collection type. Arrays are everywhere. We're going to add the five functions to the Array type, and in the 
@@ -31,23 +31,35 @@ module.exports = function (names) {
 
 var verify = require('adventure-verify')
 var path = require('path')
-var spawn = require('child_process').spawn
-var concat = require('concat-stream')
+var exec = require('child_process').exec
+var intercept = require("intercept-stdout")
 
-exports.verify = verify({ modeReset: true }, function (args,t) {
-  t.plan(4)
+exports.verify = verify({ modeReset: false }, function (args,t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
 
   var f = require(path.resolve(args[0]))
   t.equal(typeof f, 'function', 'you exported a function')
 
-  var ps = spawn(process.execPath, f(["Ben", "Jafar", "Matt", "Priya", "Brian"]))
-  ps.stderr.pipe(process.stderr)
+  var captured_text = "";
+  var unhook_intercept = intercept(function(txt) {
+    captured_text += txt
+    return ''
+  })
 
-  ps.stdout.pipe(concat(function (body) {
-    t.equal(body.toString().replace(' ', ''), 'BenJafarMattPriyaBrian\n')
-  }))
-  ps.on('exit', function (code) {
-    t.equal(code, 0, 'successful exit code')
+  f(["Ben", "Jafar", "Matt", "Priya", "Brian"])
+
+  unhook_intercept();
+
+  t.equal(captured_text.replace(' ', ''), ["Ben", "Jafar", "Matt", "Priya", "Brian"].join('\n') + '\n')
+  t.end()
+})
+
+exports.run = function (args) {
+  var f = require(path.resolve(args[0]))
+  var ps = exec(f(["Ben", "Jafar", "Matt", "Priya", "Brian"]))
+  ps.stderr.pipe(process.stderr)
+  ps.stdout.pipe(process.stdout)
+  ps.once('exit', function (code) {
+    if (code) process.exit(code)
   })
 }
