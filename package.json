@@ -1,6 +1,6 @@
 {
   "name": "learnrx",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A module to teach you how to do functional programming with plain JavaScript and RxJS library.",
   "bin": "index.js",
   "repository": {
@@ -20,6 +20,8 @@
   "license": "ISC",
   "preferGlobal": true,
   "dependencies": {
-    "adventure": "^2.11.0"
+    "adventure": "^2.11.0",
+    "adventure-verify": "^2.2.0",
+    "concat-stream": "^1.5.1"
   }
 }
