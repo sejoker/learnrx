@@ -1,5 +1,5 @@
 # learnrx
-A series of interactive exercises for learning functional programming with plain JavaScript and RxJS library.
+A series of interactive exercises for learning functional programming in JavaScript and basics of RxJS library.
 
 inspired by [learnrx in-browser version](https://github.com/ReactiveX/learnrx)
 
