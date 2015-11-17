@@ -9,18 +9,6 @@ Exercise 3: Project an array of videos into an array of {id,title} pairs using f
 
 For each video, add a projected {id, title} pair to the videoAndTitlePairs array.
 
-Input example:
-[
-  {
-    "id": 70111470,
-    "title": "Die Hard",
-    "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
-    "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
-    "rating": [4.0],
-    "bookmark": []
-  }
-]
-
 module.exports = function(videos) {
 
   var videoAndTitlePairs = [];
@@ -33,7 +21,19 @@ module.exports = function(videos) {
 
 
   return videoAndTitlePairs;
-}  
+}
+
+// Input example:
+// [
+//   {
+//     "id": 70111470,
+//     "title": "Die Hard",
+//     "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard.jpg",
+//     "uri": "http://api.netflix.com/catalog/titles/movies/70111470",
+//     "rating": [4.0],
+//     "bookmark": []
+//   }
+// ]
 */}.toString().split('\n').slice(1,-1).join('\n')
 
 exports.solution = function (videos) { /*
