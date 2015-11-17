@@ -55,7 +55,7 @@ exports.verify = verify({ modeReset: true}, function (args, t) {
   var result = arr.map(function (x) { return x + 1 })
   t.equal(JSON.stringify(arr), '[1,2,3]', 'Original array stays unchanged')
   t.equal(JSON.stringify(result), '[2,3,4]', 'Expected that [1,2,3].map(function(x) { return x + 1}) would equal [2,3,4].')
-  t.ok(useForEach, 'You did use Array.forEach')
+  t.ok(useForEach, 'you did use Array.forEach')
   t.end()
 })
 

@@ -9,7 +9,7 @@ Exercise 3: Project an array of videos into an array of {id,title} pairs using f
 
 For each video, add a projected {id, title} pair to the videoAndTitlePairs array.
 
-module.exports = function(videos) {
+module.exports = function (videos) {
 
   var videoAndTitlePairs = [];
 
@@ -37,7 +37,7 @@ module.exports = function(videos) {
 */}.toString().split('\n').slice(1,-1).join('\n')
 
 exports.solution = function (videos) { /*
-module.exports = function(videos) {
+module.exports = function (videos) {
   
   var videoAndTitlePairs = [];
 

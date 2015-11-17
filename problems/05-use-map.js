@@ -4,7 +4,7 @@ Exercise 5: Use map() to project an array of videos into an array of {id,title} 
 Let's repeat the exercise of collecting {id, title} pairs for each video in
 the newReleases array, but this time we'll use our map function. 
 
-module.exports = function(videos) {
+module.exports = function (videos) {
   
   // ------------ INSERT CODE HERE! -----------------------------------
   // Use map function to accumulate {id, title} pairs from each video.
@@ -95,6 +95,6 @@ exports.verify = verify({ modeReset: true }, function (args, t) {
     }, [])
   
   t.deepEqual(f(newReleases), expected)
-  t.ok(useMap, 'You did use Array.map')
+  t.ok(useMap, 'you did use Array.map')
   t.end()
 })
