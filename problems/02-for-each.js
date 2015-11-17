@@ -24,6 +24,7 @@ var verify = require('adventure-verify')
 var path = require('path')
 var exec = require('child_process').exec
 var intercept = require("intercept-stdout")
+var inputParams = ["Ben", "Jafar", "Matt", "Priya", "Brian"]
 
 exports.verify = verify({ modeReset: false }, function (args,t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
@@ -37,17 +38,17 @@ exports.verify = verify({ modeReset: false }, function (args,t) {
     return ''
   })
 
-  f(["Ben", "Jafar", "Matt", "Priya", "Brian"])
+  f(inputParams)
 
   unhook_intercept();
 
-  t.equal(captured_text.replace(' ', ''), ["Ben", "Jafar", "Matt", "Priya", "Brian"].join('\n') + '\n')
+  t.equal(captured_text.replace(' ', ''), inputParams.join('\n') + '\n')
   t.end()
 })
 
 exports.run = function (args) {
   var f = require(path.resolve(args[0]))
-  var ps = exec(f(["Ben", "Jafar", "Matt", "Priya", "Brian"]))
+  var ps = exec(f(inputParams))
   ps.stderr.pipe(process.stderr)
   ps.stdout.pipe(process.stdout)
   ps.once('exit', function (code) {

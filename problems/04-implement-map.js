@@ -24,9 +24,9 @@ Array.prototype.map = function (projectionFunction) {
 */}.toString().split('\n').slice(1,-1).join('\n')
 
 exports.solution = function () { /*
-Array.prototype.map = function(projectionFunction) {
+Array.prototype.map = function (projectionFunction) {
   var results = [];
-  this.forEach(function(itemInArray) {
+  this.forEach(function (itemInArray) {
     results.push(projectionFunction(itemInArray));
 
   });
@@ -53,8 +53,8 @@ exports.verify = verify({ modeReset: true}, function (args, t) {
   require(path.resolve(args[0]))
   var arr = [1,2,3]
   var result = arr.map(function (x) { return x + 1 })
-  t.equal(JSON.stringify(arr), '[1,2,3]', 'Original array stays unchanged')
-  t.equal(JSON.stringify(result), '[2,3,4]', 'Expected that [1,2,3].map(function(x) { return x + 1}) would equal [2,3,4].')
+  t.deepEqual(arr, [1,2,3], 'Original array stays unchanged')
+  t.deepEqual(result, [2,3,4], 'Expected that [1,2,3].map(function(x) { return x + 1}) would equal [2,3,4].')
   t.ok(useForEach, 'you did use Array.forEach')
   t.end()
 })
