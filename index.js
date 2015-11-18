@@ -14,8 +14,6 @@ problems.filter(function (problem) {
   return problem.match(/^[^.].*\.js$/)
 }).forEach(function (problem) {
   var name = problem.replace(/\.js$/, '').split('-').map(function (p) {
-    if (p === 'npm')
-      return p
     return p.charAt(0).toUpperCase() + p.slice(1)
   }).join(' ')
   shop.add(name, function () {

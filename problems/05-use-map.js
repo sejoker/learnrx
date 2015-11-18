@@ -28,7 +28,7 @@ module.exports = function (videos) {
 
 exports.solution = function () { /*
 module.exports = function (videos) {
-  return newReleases.map(function (video) { 
+  return videos.map(function (video) { 
       return { id: video.id, title: video.title };
   });
 }

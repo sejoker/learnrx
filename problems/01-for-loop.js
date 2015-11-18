@@ -53,7 +53,7 @@ exports.verify = verify({ modeReset: false }, function (args,t) {
 
   unhook_intercept();
 
-  t.equal(captured_text.replace(' ', ''), [inputParams].join('\n') + '\n')
+  t.equal(captured_text.replace(' ', ''), inputParams.join('\n') + '\n')
   t.end()
 })
 
