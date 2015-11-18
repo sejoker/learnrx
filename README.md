@@ -1,3 +1,4 @@
+[![build status](https://img.shields.io/travis/sejoker/learnrx/master.svg?style=flat-square)](https://travis-ci.org/sejoker/learnrx)[![npm downloads](https://img.shields.io/npm/dt/learnrx.svg?style=flat-square)](https://www.npmjs.com/package/learnrx)
 # learnrx
 A series of interactive exercises for learning functional programming in JavaScript and basics of RxJS library.
 
