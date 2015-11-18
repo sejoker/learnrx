@@ -40,6 +40,10 @@ Array.prototype.filter = function(predicateFunction) {
 
   return results;
 };
+
+// Like map(), filter() lets us express what data we want without requiring us
+// to specify how we want to collect the data.
+
 */}.toString().split('\n').slice(1, -1).join('\n')
 
 var verify = require('adventure-verify')
