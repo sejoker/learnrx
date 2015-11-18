@@ -47,13 +47,6 @@ module.exports = function (videos) {
 
   return topRated;
 }
-
-// Notice that, like map(), every filter() operation shares some operations in common:
-
-// Traverse the array
-// Add objects that pass the test to a new array
-// Why not abstract away how these operations are carried out?
-
 */}.toString().split('\n').slice(1, -1).join('\n')
 
 var verify = require('adventure-verify')

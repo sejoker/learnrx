@@ -1,6 +1,6 @@
 {
   "name": "learnrx",
-  "version": "2.2.1",
+  "version": "2.3.4",
   "description": "A module to teach you functional programming in JavaScript and basics of RxJS library.",
   "bin": "index.js",
   "repository": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/sejoker/learnrx/issues"
   },
   "keywords": [
-    "rxjs",
+    "rxjs", 
     "workshop",
     "adventure",
     "tutorial"

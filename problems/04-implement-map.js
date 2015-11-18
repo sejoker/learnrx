@@ -51,10 +51,11 @@ exports.verify = verify({ modeReset: true}, function (args, t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
 
   require(path.resolve(args[0]))
+
   var arr = [1,2,3]
   var result = arr.map(function (x) { return x + 1 })
-  t.deepEqual(arr, [1,2,3], 'Original array stays unchanged')
-  t.deepEqual(result, [2,3,4], 'Expected that [1,2,3].map(function(x) { return x + 1}) would equal [2,3,4].')
+  t.deepEqual(arr, [1,2,3], 'original array stays unchanged')
+  t.deepEqual(result, [2,3,4], 'expected that [1,2,3].map(function(x) { return x + 1}) would equal [2,3,4].')
   t.ok(useForEach, 'you did use Array.forEach')
   t.end()
 })
