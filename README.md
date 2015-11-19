@@ -19,3 +19,8 @@ npm install -g learnrx
 # run
 
 Now just type `learnrx` to play!
+
+## screeshot
+
+![screen shot 2015-11-19 at 11 00 18 pm](https://cloud.githubusercontent.com/assets/125466/11285687/17faff7a-8f11-11e5-98fe-6d8f6c362413.png)
+
