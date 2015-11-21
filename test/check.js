@@ -6,6 +6,10 @@ var adventures = fs.readdirSync(path.resolve(__dirname, '..', 'problems'))
 
 adventures.slice(1).forEach(function (name) {
 
+    if (name === '15-use-for-each.js') {
+        return;
+    }
+
     test(name, function (t) {
         t.plan(2)
         var solution = path.join(__dirname, 'solutions', name)
