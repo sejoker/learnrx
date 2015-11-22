@@ -4,9 +4,23 @@ var test = require('tape')
 var fs = require('fs')
 var adventures = fs.readdirSync(path.resolve(__dirname, '..', 'problems'))
 
-adventures.slice(1).forEach(function (name) {
+var adventuresToSkip = [
+    '00-intro.js',
+    '15-use-for-each.js',
+    '16-implement-reduce.js'
+]
 
-    if (name === '15-use-for-each.js') {
+adventures.forEach(function (name) {
+
+    if (adventuresToSkip.reduce(function (prev, current) {
+        if (prev) return prev;
+
+        if (name === current) {
+            return true;
+        }
+
+        return false;
+    }, false)) {
         return;
     }
 
