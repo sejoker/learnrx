@@ -44,6 +44,11 @@ Array.prototype.reduce = function (combiner, initialValue) {
     return [accumulatedValue];
   }
 };
+
+// NOTE: The ES5 spec has reduce return a single value instead of an array with a single value.
+
+// You can ignore this difference for now, but our reduce behaves this way for the same reason
+// you are forbidden from using bracket array access notation.
 */}.toString().split('\n').slice(1, -1).join('\n')
 
 

@@ -31,10 +31,12 @@ var verify = require('adventure-verify')
 var path = require('path')
 var ratings = [2,3,1,4,5]
 
+require('../src/reduce')
+
 exports.verify = verify({ modeReset: true }, function (args, t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
   var f = require(path.resolve(args[0]))
   t.equal(typeof f, 'function', 'you exported a function')
-  t.equal(f(ratings), 5)
+  t.deepEqual(f(ratings), [5])
   t.end()
 })
