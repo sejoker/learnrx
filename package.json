@@ -1,6 +1,6 @@
 {
   "name": "learnrx",
-  "version": "2.14.0",
+  "version": "2.15.0",
   "description": "A module to teach you functional programming in JavaScript and basics of RxJS library.",
   "bin": "index.js",
   "repository": {
@@ -25,7 +25,8 @@
   "dependencies": {
     "adventure": "^2.11.0",
     "adventure-verify": "^2.2.0",
-    "intercept-stdout": "^0.1.2"
+    "intercept-stdout": "^0.1.2",
+    "object-assign": "^4.0.1"
   },
   "devDependencies": {
     "tape": "^4.2.2"
