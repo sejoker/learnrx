@@ -1,25 +1,12 @@
 exports.problem = function () { /*
-Zipping Arrays
+Exercise 23: Combine videos and bookmarks by index
 
-Sometimes we need to combine two arrays by progressively taking an item from each
-and combining the pair. If you visualize a zipper, where each side is an array,
-and each tooth is an item, you'll have a good idea of how the zip operation works.
-
-Exercise 21: Combine videos and bookmarks by index
-
-Use a for loop to traverse the videos and bookmarks array at the same time. For each
-video and bookmark pair, create a {videoId, bookmarkId} pair and add it to the
-videoIdAndBookmarkIdPairs array.
+Let's repeat exercise 21, but this time lets use your new zip() function.
+For each video and bookmark pair, create a {videoId, bookmarkId} pair.
 
 module.exports = function(videos, bookmarks) {
-  var counter,
-  videoIdAndBookmarkIdPairs = [];
-
-  for(var counter = 0; counter < Math.min(videos.length, bookmarks.length); counter++) {
-    // Insert code here to create a {videoId, bookmarkId} pair and add it to the videoIdAndBookmarkIdPairs array.
-  }
-
-  return videoIdAndBookmarkIdPairs;
+  return Array.
+    zip( //... finish this expression
 }
 
 // Input example:
@@ -39,17 +26,10 @@ module.exports = function(videos, bookmarks) {
 
 exports.solution = function () { /*
 module.exports = function (videos, bookmarks) {
-  var counter,
-  videoIdAndBookmarkIdPairs = [];
-
-  for(var counter = 0; counter < Math.min(videos.length, bookmarks.length); counter++) {
-    videoIdAndBookmarkIdPairs.push({
-      videoId: videos[counter].id,
-      bookmarkId: bookmarks[counter].id
-    });
-  }
-
-  return videoIdAndBookmarkIdPairs;
+  return Array.zip(videos, bookmarks,
+      function (video, bookmark) {
+        return { videoId: video.id, bookmarkId: bookmark.id };
+      });
 }
 */}.toString().split('\n').slice(1, -1).join('\n')
 
@@ -91,6 +71,8 @@ var videos = [
       {id: 453, time: 234324},
       {id: 445, time: 987834}
     ]
+
+require('../src/zip')
 
 exports.verify = verify({ modeReset: true }, function (args, t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
