@@ -49,7 +49,7 @@ return movieLists.
 var verify = require('adventure-verify')
 var path = require('path')
 
-require('../src/utils')
+require('../src/concat')
 
 var movieLists = [
       {

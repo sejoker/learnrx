@@ -126,7 +126,7 @@ var movieLists = [
   ]
 
 require('../src/reduce')
-require('../src/utils')
+require('../src/concat')
 
 exports.verify = verify({ modeReset: true }, function (args, t) {
   t.equal(args.length, 1, 'learnrx verify YOURFILE.js')
