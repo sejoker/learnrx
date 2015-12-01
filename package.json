@@ -1,6 +1,6 @@
 {
   "name": "learnrx",
-  "version": "2.20.0",
+  "version": "2.21.0",
   "description": "A module to teach you functional programming in JavaScript and basics of RxJS library.",
   "bin": "index.js",
   "repository": {
