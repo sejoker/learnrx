@@ -86,6 +86,8 @@ module.exports = function (lists, videos) {
     };
   });
 }
+// Looks like you figured out that you can use map and filter to join two different arrays by a key.
+// Now let's try a more complex example...
 */}.toString().split('\n').slice(1, -1).join('\n')
 
 var verify = require('adventure-verify')
